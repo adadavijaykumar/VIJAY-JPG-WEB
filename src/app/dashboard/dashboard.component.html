@@ -1,0 +1,30 @@
+<mat-toolbar>
+    <button mat-button class="menu" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+      <span>Menu</span>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="true" disableColse="true">
+      <!--<button mat-button class="menu-buttons">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </button>-->
+      <button mat-button class="menu-buttons" [routerLinkActive]="['active']" routerLink="/dashboard/user">
+        <mat-icon>person_add</mat-icon>
+        <span>Add-user</span>
+      </button>
+      <button mat-button class="menu-buttons" routerLink="">
+        <mat-icon>subdirectory_arrow_left</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  
+  
+  

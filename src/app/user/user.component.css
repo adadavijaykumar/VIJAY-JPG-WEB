@@ -1,0 +1,36 @@
+table {
+    margin-top: 30px;
+    margin-left: 120px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: skyblue;
+  }
+  .mat-header-cell, .mat-cell {
+    justify-content: center;
+    vertical-align: bottom;
+    
+  }
+  .mat-header-cell {
+    font-size: x-large;
+    color:firebrick;
+    font-weight: 800;
+  }
+  .mat-cell {
+    font-size: larger;
+    font-weight: 500;
+    color:navy;
+  }
+  .close {
+    float: right;
+    top: 0px;
+    right: -3px;
+    border-radius: 20px;
+    color: navy;
+    background-color: rgba(0,0,0, 0.09);
+  }
+  #add-user{
+    color: firebrick;
+    font-weight: 900;
+  }
+  

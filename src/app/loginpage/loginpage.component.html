@@ -1,0 +1,39 @@
+<div class="contain">
+  <div>
+    <img class="logo" src="./assets/email.jpg" alt="logo">
+  </div>
+    <form [formGroup]='LoginForm'>
+      <mat-card>
+        <h1>Login</h1>
+        <div class="mail-id">
+          <mat-label for="email">Email:</mat-label>
+          <br/>
+          <mat-form-field appearance="outline">
+            <input id="email" class="Form-control" matInput type="email" placeholder="something@email.com" formControlName="email" [(ngModel)]="userName"/>
+            <mat-error *ngIf="LoginForm.get('email').hasError('email') && !LoginForm.get('email').hasError('required')">please enter a valid email</mat-error>
+            <mat-error *ngIf="LoginForm.get('email').hasError('required')">Email is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="pass">
+          <mat-label for="password">Password:</mat-label>
+          <br/>
+          <mat-form-field appearance="outline">
+            <input matInput id="password" class="Form-control" [type]="hide ? 'password' : 'text'" placeholder="enter password" formControlName="password" [(ngModel)]="word"/>
+            <span><mat-icon mat-icon-button (click)="hide = !hide" [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">{{hide ? 'visibility_off':'visibility'}}</mat-icon></span>
+            <mat-error *ngIf="!LoginForm.get('password').hasError('requried')">please enter a valid password</mat-error>
+          </mat-form-field>
+        </div>
+        <br/>
+        <button mat-raised-button id="log" [disabled]="LoginForm.invalid" type="submit" (click)="onValue()">
+          sign In
+        </button>
+        <a class="forgot" routerLink="/forgot" >
+          Forgot Password ?
+        </a>
+        <div>
+          <h4>Don't have an account?  <span><a routerLink="/signUp">Sign Up</a></span></h4>
+        </div>
+      </mat-card>
+    </form>
+</div>
+  

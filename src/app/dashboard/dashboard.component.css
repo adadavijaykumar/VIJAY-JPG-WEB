@@ -1,0 +1,48 @@
+span{
+    font-size:larger;
+    color: #f1e5ac;
+    margin-left:10px;
+    font-display:fallback;
+}
+mat-icon {
+  margin-left: 10px;
+  color: #e3f9a6;
+  
+}
+.menu-buttons {
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+  display: flex;
+  border-radius: 10px;
+  vertical-align: central;
+}
+mat-toolbar {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: rgb(84,84,105);
+  background: linear-gradient(45deg, rgba(8,102,120,1) 15%, rgba(84,84,105,1) 44%, rgba(62,180,137,1) 64%);
+}
+mat-sidenav-container {
+  height: 91%;
+}
+
+mat-sidenav {
+  width: 200px;
+  border-radius: 5px;
+  align-content: center;
+  background: rgb(84,84,105);
+  background: linear-gradient(45deg, rgba(84,84,105,1) 25%, rgba(62,180,137,1) 44%, rgba(8,102,120,1) 64%);
+}
+.active {
+  background-color: rgba(62,180,137,0.5);
+  box-shadow:rgba(1,1,1,0.05);
+}
+.menu {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  justify-content:center;
+}
+

@@ -1,0 +1,72 @@
+.material-icons {
+    font-family: 'Material Icons' !important;
+    position:absolute;
+    color: lightsalmon;
+  }
+  mat-card {
+    width: 600px;
+    border-style: outset;
+    border-width: none;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-color:ghostwhite;
+    box-shadow: 0 10px 10px 0 rgba(128,0,105,0.5);
+    top:180px;
+    left:500px;
+    display: -ms-flexbox;
+  }
+  h1 {
+    color:darkblue;
+    margin:10px 10px;
+    padding:10px 5px;
+    font-size: 35px;
+    text-align:center;
+    font-family: "Goudy old style";
+    font-weight:500;
+    border-style:groove;
+    border: 1px;
+    border-radius:20px;
+  }
+  #log{
+    font-size: xx-large;
+    width: 595px;
+    color: firebrick;
+    /*transform:translateX(240px);
+    border-style:outset;*/
+    border:none;
+    border-radius:20px;
+    font-weight: 300;
+    padding: 5px;
+  }
+  mat-form-field {
+    width: stretch;
+    margin: 10px;
+  }
+  .pass{
+    width: stretch;
+    margin-top:5px;
+  }
+  mat-label {
+    Font-size:20px;
+    color:crimson;
+    margin-top:40px;
+    font-weight:200;
+    font-style:oblique;
+  }
+  mat-error{
+      color:lightcoral;
+      font-size:small;
+      margin:10px;
+  }
+  .mat-input-element {
+    padding: 5px;
+    font-size:large;
+    color: rgb(24, 91, 179);
+    width: 90%;
+  }
+  .logo{
+    height:100px;
+    width:90px ;
+    transform: translate(761px, 127px);
+  }

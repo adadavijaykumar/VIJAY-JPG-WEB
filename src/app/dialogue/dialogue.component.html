@@ -1,0 +1,58 @@
+<div mat-dialog-content>
+    <button mat-mini-fab (click)="onClick()" class="close-icon" routerLink="/dashboard/user">
+      <mat-icon>close</mat-icon>
+    </button>
+    <form [formGroup]="dialogForm">
+      <div>
+        <mat-label>First Name:</mat-label>
+        <br/>
+        <mat-form-field appearance="fill">
+          <input matInput type="text" formControlName="first" placeholder="Firstname" [(ngModel)]="data.First"/>
+          <mat-error *ngIf="dialogForm.get('first').hasError('required')">Please enter the First Name</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Last Name:</mat-label>
+        <br/>
+        <mat-form-field appearance="fill">
+          <input matInput type="text" formControlName="last" placeholder="Lastname" [(ngModel)]="data.Last" />
+          <mat-error *ngIf="dialogForm.get('last').hasError('required')">Please enter the Last Name</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Email:</mat-label>
+        <br/>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="email" placeholder="email" [(ngModel)]="data.Email" />
+          <mat-error *ngIf="dialogForm.get('email').hasError('pattern') && !dialogForm.get('email').hasError('required')">please enter a valid email</mat-error>
+          <mat-error *ngIf="dialogForm.get('email').hasError('required')">Email is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Phone Number:</mat-label>
+        <br/>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="phone" placeholder="phone number" [(ngModel)]="data.Phone"/>
+          <mat-error *ngIf="dialogForm.get('phone').hasError('pattern') && !dialogForm.get('phone').hasError('required')">please enter a valid phone number</mat-error>
+          <mat-error *ngIf="dialogForm.get('phone').hasError('required')">Phone number is required</mat-error>
+        </mat-form-field>
+      </div>
+      <br/>
+      <div>
+        <mat-radio-group formControlName="gender" [(ngModel)]="data.Gender">
+          <mat-label>Gender:</mat-label>
+          <mat-radio-button value="Male">Male</mat-radio-button>
+          <mat-radio-button value="female">Female</mat-radio-button>
+          <mat-radio-button value="other">Other</mat-radio-button>
+          <mat-error *ngIf="dialogForm.get('gender').submitted && dialogForm.get('gender').invalid">Please select a proper gender</mat-error>
+        </mat-radio-group>
+      </div>
+    </form>
+  </div> 
+  <br/>
+  <br/>
+  <div mat-dialog-actions>
+    <button mat-storked-button  class="sub" type="submit" (click)="Onok()" cdkFocusInitial>Submit</button>
+    <button mat-storked-button class="re" (click)="onReset()">Reset</button>
+  </div>   
+  
